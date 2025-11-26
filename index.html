@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +10,23 @@
 
 <header>
     <h1>Felipe</h1>
-    <p>DevOps | Cloud | Automatización</p>
+    <p>DevOps | Cloud | Linux | Networking | Security</p>
 </header>
 
 <nav>
-    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#sobre-mi">About</a>
     <a href="#skills">Skills</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#cv">CV</a>
+    <a href="#proyectos">Projects</a>
+    <a href="#cv">Resume</a>
 </nav>
 
 <section id="sobre-mi">
-    <h2>Sobre mí</h2>
+    <h2>About Me</h2>
     <p>
-        Ingeniero en Computación e Informática enfocado en DevOps, Cloud y automatización. 
-        Experiencia en contenedores, CI/CD, infraestructura como código y seguridad en la nube.
+        Computer and Information Engineer focused on DevOps, Cloud, and automation.
+        Experience with containers, CI/CD, infrastructure as code, and cloud security.
     </p>
-</section>
+    </section>
 
 <section id="skills">
     <h2>Skills</h2>
@@ -43,45 +43,22 @@
 </section>
 
 <section id="proyectos">
-    <h2>Proyectos</h2>
-    <div id="project-list">Cargando proyectos...</div>
-</section>
+    <h2>Projects</h2>
+    <div id="project-list">Loading projects...</div>
+    </section>
 
 <section id="cv">
-    <h2>CV</h2>
-    <p>Puedes descargar mi CV en PDF:</p>
-    <a class="btn" href="cv.pdf" target="_blank">Descargar CV</a>
-</section>
+    <h2>Resume</h2>
+    <p>You can download my resume (PDF):</p>
+    <a class="btn" href="cv.pdf" target="_blank">Download Resume</a>
+    </section>
 
 <footer>
     <p>© 2025 Felipe – DevOps & Cloud</p>
+    <p><a href="LICENSE" target="_blank">Code: MIT</a> · <a href="LICENSE-Content" target="_blank">Content: CC BY 4.0</a></p>
 </footer>
 
-<script>
-async function loadProjects() {
-    try {
-        const res = await fetch("projects.json");
-        const projects = await res.json();
-        const container = document.getElementById("project-list");
-        container.innerHTML = "";
-
-        projects.forEach(p => {
-            const item = document.createElement("div");
-            item.className = "project";
-            item.innerHTML = `
-                <h3>${p.name}</h3>
-                <p>${p.desc}</p>
-                <a href="${p.link}" target="_blank">Ver proyecto</a>
-            `;
-            container.appendChild(item);
-        });
-    } catch {
-        document.getElementById("project-list").innerText = "No se pudieron cargar los proyectos.";
-    }
-}
-
-loadProjects();
-</script>
+<script src="script.js" defer></script>
 
 </body>
 </html>
