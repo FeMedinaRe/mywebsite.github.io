@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe – DevOps & Cloud</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Felipe</h1>
+    <p>DevOps | Cloud | Automatización</p>
+</header>
+
+<nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#skills">Skills</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#cv">CV</a>
+</nav>
+
+<section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>
+        Ingeniero en Computación e Informática enfocado en DevOps, Cloud y automatización. 
+        Experiencia en contenedores, CI/CD, infraestructura como código y seguridad en la nube.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul class="grid">
+        <li>Docker</li>
+        <li>Kubernetes</li>
+        <li>OCI / AWS / Azure</li>
+        <li>Terraform</li>
+        <li>Ansible</li>
+        <li>GitHub Actions</li>
+        <li>Linux</li>
+        <li>CI/CD</li>
+    </ul>
+</section>
+
+<section id="proyectos">
+    <h2>Proyectos</h2>
+    <div id="project-list">Cargando proyectos...</div>
+</section>
+
+<section id="cv">
+    <h2>CV</h2>
+    <p>Puedes descargar mi CV en PDF:</p>
+    <a class="btn" href="cv.pdf" target="_blank">Descargar CV</a>
+</section>
+
+<footer>
+    <p>© 2025 Felipe – DevOps & Cloud</p>
+</footer>
+
+<script>
+async function loadProjects() {
+    try {
+        const res = await fetch("projects.json");
+        const projects = await res.json();
+        const container = document.getElementById("project-list");
+        container.innerHTML = "";
+
+        projects.forEach(p => {
+            const item = document.createElement("div");
+            item.className = "project";
+            item.innerHTML = `
+                <h3>${p.name}</h3>
+                <p>${p.desc}</p>
+                <a href="${p.link}" target="_blank">Ver proyecto</a>
+            `;
+            container.appendChild(item);
+        });
+    } catch {
+        document.getElementById("project-list").innerText = "No se pudieron cargar los proyectos.";
+    }
+}
+
+loadProjects();
+</script>
+
+</body>
+</html>
