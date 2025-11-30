@@ -4,14 +4,23 @@ async function loadProjects() {
         const projects = await res.json();
         const container = document.getElementById("project-list");
         container.innerHTML = "";
+        container.className = "columns is-multiline";
 
         projects.forEach(p => {
             const item = document.createElement("div");
-            item.className = "project";
+            item.className = "column is-one-third";
             item.innerHTML = `
-                <h3>${p.name}</h3>
-                <p>${p.desc}</p>
-                <a href="${p.link}" target="_blank">View project</a>
+                <div class="card">
+                    <div class="card-content">
+                        <p class="title is-4">${p.name}</p>
+                        <div class="content">
+                            ${p.desc}
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="${p.link}" target="_blank" class="card-footer-item">View project</a>
+                    </footer>
+                </div>
             `;
             container.appendChild(item);
         });

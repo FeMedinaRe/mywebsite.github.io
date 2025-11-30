@@ -4,58 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felipe – DevOps & Cloud</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Felipe</h1>
-    <p>DevOps | Cloud | Linux | Networking | Security</p>
-</header>
-
-<nav>
-    <a href="#sobre-mi">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#proyectos">Projects</a>
-    <a href="#cv">Resume</a>
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+            <strong>Felipe</strong>
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="#sobre-mi">About</a>
+            <a class="navbar-item" href="#skills">Skills</a>
+            <a class="navbar-item" href="#proyectos">Projects</a>
+            <a class="navbar-item" href="#cv">Resume</a>
+        </div>
+    </div>
 </nav>
 
-<section id="sobre-mi">
-    <h2>About Me</h2>
-    <p>
-        Computer and Information Engineer focused on DevOps, Cloud, and automation.
-        Experience with containers, CI/CD, infrastructure as code, and cloud security.
-    </p>
-    </section>
-
-<section id="skills">
-    <h2>Skills</h2>
-    <ul class="grid">
-        <li>Docker</li>
-        <li>Kubernetes</li>
-        <li>OCI / AWS / Azure</li>
-        <li>Terraform</li>
-        <li>Ansible</li>
-        <li>GitHub Actions</li>
-        <li>Linux</li>
-        <li>CI/CD</li>
-    </ul>
+<section class="hero is-dark is-medium">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title is-1">Felipe</h1>
+            <p class="subtitle is-4">DevOps | Cloud | Linux | Networking | Security</p>
+        </div>
+    </div>
 </section>
 
-<section id="proyectos">
-    <h2>Projects</h2>
-    <div id="project-list">Loading projects...</div>
-    </section>
+<section id="sobre-mi" class="section">
+    <div class="container">
+        <h2 class="title is-2">About Me</h2>
+        <div class="content is-medium">
+            <p>
+                Computer and Information Engineer focused on DevOps, Cloud, and automation.
+                Experience with containers, CI/CD, infrastructure as code, and cloud security.
+            </p>
+        </div>
+    </div>
+</section>
 
-<section id="cv">
-    <h2>Resume</h2>
-    <p>You can download my resume (PDF):</p>
-    <a class="btn" href="cv.pdf" target="_blank">Download Resume</a>
-    </section>
+<section id="skills" class="section">
+    <div class="container">
+        <h2 class="title is-2">Skills</h2>
+        <div class="tags are-medium">
+            <span class="tag is-info is-light">Docker</span>
+            <span class="tag is-info is-light">Kubernetes</span>
+            <span class="tag is-info is-light">OCI / AWS / Azure</span>
+            <span class="tag is-info is-light">Terraform</span>
+            <span class="tag is-info is-light">Ansible</span>
+            <span class="tag is-info is-light">GitHub Actions</span>
+            <span class="tag is-info is-light">Linux</span>
+            <span class="tag is-info is-light">CI/CD</span>
+        </div>
+    </div>
+</section>
 
-<footer>
-    <p>© 2025 Felipe – DevOps & Cloud</p>
-    <p><a href="LICENSE" target="_blank">Code: MIT</a> · <a href="LICENSE-Content" target="_blank">Content: CC BY 4.0</a></p>
+<section id="proyectos" class="section">
+    <div class="container">
+        <h2 class="title is-2">Projects</h2>
+        <div id="project-list">Loading projects...</div>
+    </div>
+</section>
+
+<section id="cv" class="section">
+    <div class="container">
+        <h2 class="title is-2">Resume</h2>
+        <div class="content">
+            <p>You can download my resume (PDF):</p>
+            <a class="button is-primary is-medium" href="cv.pdf" target="_blank">Download Resume</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer has-background-dark has-text-light">
+    <div class="content has-text-centered">
+        <p>© 2025 Felipe – DevOps & Cloud</p>
+        <p>
+            <a href="LICENSE" target="_blank" class="has-text-light">Code: MIT</a> · 
+            <a href="LICENSE-Content" target="_blank" class="has-text-light">Content: CC BY 4.0</a>
+        </p>
+    </div>
 </footer>
 
 <script src="script.js" defer></script>
