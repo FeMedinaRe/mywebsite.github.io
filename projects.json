@@ -1,17 +1,17 @@
 [
     {
-        "name": "Pipeline CI/CD con GitHub Actions",
-        "desc": "Automatización de build, test y despliegue usando Docker y GitHub Actions.",
+        "name": "CI/CD Pipeline with GitHub Actions",
+        "desc": "Automated build, test, and deployment using Docker and GitHub Actions.",
         "link": "https://github.com/tu-usuario/tu-repo"
     },
     {
-        "name": "Infraestructura como código con Terraform",
-        "desc": "Provisionamiento automático de infraestructura en la nube.",
+        "name": "Infrastructure as Code with Terraform",
+        "desc": "Automated cloud infrastructure provisioning.",
         "link": "https://github.com/tu-usuario/terraform-iac-example"
     },
     {
-        "name": "Cluster Kubernetes local con k3d",
-        "desc": "Ambiente de desarrollo DevOps usando contenedores.",
+        "name": "Local Kubernetes Cluster with k3d",
+        "desc": "DevOps development environment using containers.",
         "link": "https://github.com/tu-usuario/k3d-lab"
     }
 ]
